@@ -4,7 +4,7 @@ metadata:
   name: pipline-demo-lb
 spec:
   selector:
-    name: pipeline-demo-ing
+    name: pipeline-demo-svc
   type: LoadBalancer
   ports:
     - name: http
