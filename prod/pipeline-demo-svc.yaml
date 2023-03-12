@@ -1,21 +1,11 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: v1
+kind: Service
 metadata:
   name: pipeline-demo
 spec:
-  replicas: 1
-  revisionHistoryLimit: 3
+  ports:
+  - port: 3000
+    targetPort: 3000
   selector:
-    matchLabels:
-      app: pipeline-demo
-  template:
-    metadata:
-      labels:
-        app: pipeline-demo
-    spec:
-      containers:
-      - image: lurcio/pipeline-demo:v0.0.2
-        name: pipeline-demo
-        ports:
-        - containerPort: 3000
+    app: pipeline-demo
 
