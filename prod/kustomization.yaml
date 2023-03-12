@@ -4,5 +4,6 @@ resources:
 - pipeline-demo-ns.yaml
 - pipeline-demo-deployment.yaml
 - pipeline-demo-svc.yaml
+- pipeline-demo-ingress.yaml
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
